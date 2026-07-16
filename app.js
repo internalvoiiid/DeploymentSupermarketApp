@@ -17,22 +17,22 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// const connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'RP738964$',
+//     database: 'c237_supermarketdb'
+//   });
+// [C237-030] Database connection to Azure MySQL Database
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'RP738964$',
-    database: 'c237_supermarketdb'
-  });
-// // [C237-030] Database connection to Azure MySQL Database
-// const db = mysql.createConnection({
-//     host: 'c237-annie-mysql.mysql.database.azure.com',
-//     user: 'c237_030',
-//     password: 'c237030@2026!',
-//     database: '`c237_030_supermarketdb_ca2team5`',
-//     ssl: {
-//         rejectUnauthorized: false
-//     }
-// });
+    host: 'c237-annie-mysql.mysql.database.azure.com',
+    user: 'c237_030',
+    password: 'c237030@2026!',
+    database: '`c237_030_supermarketdb_ca2team5`',
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
 
 
 connection.connect((err) => {
